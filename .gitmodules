@@ -1,3 +1,6 @@
 [submodule "OpenIGTLink"]
 	path = OpenIGTLink
 	url = git@github.com:openigtlink/OpenIGTLink.git
+[submodule "MatlabOpenIGTLink"]
+	path = MatlabOpenIGTLink
+	url = git@github.com:jsbyysheng/MatlabOpenIGTLink.git
