@@ -14,7 +14,7 @@
 Click "Configure" and select your compiler (usually just click "OK")
 2. Click "Configure", Message: "Build directory does not exit, should I create it?" - click "OK".
 3. Select your compiler: First Selector: Visual Studio 16 2019, Second Selector: x64 - click "Finsh" (Maybe you should try several times in China ^_^) (How to set Proxy in cmake: Click `Environment Editor` and add variables: `HTTP_PROXY` with value `http://127.0.0.1:xxxx`, `HTTPS_PROXY` with value `http://127.0.0.1:xxxx`)
-4. Select like this ![cmake](./images/cmake.png) (If you do not need `VideoStream` and `OpenH264`, you can deselect them and skip Step 2)
+4. Select like this ![cmake](./images/cmake.jpg) (If you do not need `VideoStream` and `OpenH264`, you can deselect them and skip Step 2)
 5. Click "Generate"
 
 ## Step 2, build OpenH264
