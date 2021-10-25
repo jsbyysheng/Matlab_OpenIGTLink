@@ -13,7 +13,7 @@
 1. Run CMake, Where is the source code: `path\to\OpenIGTLink`, Where to build the binaries: `path\to\OpenIGTLink-build`.
 Click "Configure" and select your compiler (usually just click "OK")
 2. Click "Configure", Message: "Build directory does not exit, should I create it?" - click "OK".
-3. Select your compiler: First Selector: Visual Studio 16 2019, Second Selector: x64 - click "Finsh" (Maybe you should try several times in China ^_^) (How to set Proxy in cmake: Click `Environment Editor` and add variables: `HTTP_PROXY` with value `http://127.0.0.1:xxxx`, `HTTPS_PROXY` with value `http://127.0.0.1:xxxx`)
+3. Select your compiler: First Selector: Visual Studio 16 2019 - click "Finsh" (Maybe you should try several times in China ^_^) (How to set Proxy in cmake: Click `Environment Editor` and add variables: `HTTP_PROXY` with value `http://127.0.0.1:xxxx`, `HTTPS_PROXY` with value `http://127.0.0.1:xxxx`)
 4. Select like this ![cmake](./images/cmake.jpg) (If you do not need `VideoStream` and `OpenH264`, you can deselect them and skip Step 2)
 5. Click "Generate"
 
@@ -24,7 +24,15 @@ Click "Configure" and select your compiler (usually just click "OK")
 4. double-click `build_openh264.bat` in `path\to\OpenIGTLink-build\Deps\openh264` and waiting for building completely.
 
 ## Step3, build OpenIGTLink
-1. Go back to `Visual Studio Professional 2019` and rebuild `OpenIGTLink`.
+1. Go back to `Visual Studio Professional 2019` and rebuild `OpenIGTLink`, you should build a **release version**, that is very important!!!. Otherwise, Matlab will throw a memory error.
 
 ## Step4, build MatlabIGTL
-1. 
+1. Run CMake, Where is the source code: `path\to\MatlabIGTL`, Where to build the binaries: `path\to\MatlabIGTL-build`.
+Click "Configure" and select your compiler (usually just click "OK")
+2. Click "Configure", Message: "Build directory does not exit, should I create it?" - click "OK".
+3. Select your compiler: First Selector: Visual Studio 16 2019 - click "Finsh"
+4. In Matlab, using `mex -setup` to set mex C and C++ builder as `Microsoft Visual C++ 2019`
+5. Click "Generate"
+6. Go to `Visual Studio Professional 2019` and build `MatlabIGTL`, you should build a **release version**, that is very important!!!. Otherwise, Matlab will throw a memory error.
+
+## Step5, Package ALL
